@@ -10,6 +10,10 @@
 { "hdr": "714", "rax": "77E", "cmd": {"22": "2203"}, "freq": 10, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
     {"id": "IBIZA_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+  { "hdr": "714", "rax": "77E", "cmd": {"22": "2613"}, "freq": 30,
+  "signals": [
+    {"id": "IBIZA_IAT", "path": "Climate", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "celsius" }, "name": "Interior air temperature"}
   ]}
 ]
 }
