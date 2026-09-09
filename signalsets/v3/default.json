@@ -3,7 +3,7 @@
   "signals": [
     {"id": "IBIZA_AAT", "path": "Climate", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Ambient air temperature", "description": "More testing of this parameter is needed"}
   ]},
-  { "hdr": "714", "rax": "77E", "cmd": {"22": "2613"}, "freq": 30,
+  { "hdr": "714", "rax": "77E", "dbg": true, "cmd": {"22": "2613"}, "freq": 30,
   "signals": [
     {"id": "IBIZA_IAT", "path": "Climate", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "celsius" }, "name": "Interior air temperature"}
   ]},
