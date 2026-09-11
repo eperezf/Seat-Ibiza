@@ -55,6 +55,26 @@
   "signals": [
     {"id": "IBIZA_STEERING_ANGLE", "path": "Orientation", "fmt": { "len": 16, "bix": 0, "div": 8, "add": -750, "min": -660, "max": 660, "unit": "degrees" }, "name": "Steering wheel angle"}
   ]},
+{ "hdr": "713", "cmd": {"22": "1804"}, "freq": 10,
+  "signals": [
+    {"id": "IBIZA_STEERING_ANGLE_ABS", "path": "Orientation", "fmt": { "len": 16, "bix": 0, "mul": 0.4375, "min": 0, "max": 660, "unit": "degrees" }, "name": "Steering wheel angle absolute"}
+  ]},
+{ "hdr": "713", "dbg": true, "cmd": {"22": "1800"}, "freq": 10,
+  "signals": [
+    {"id": "IBIZA_WHEEL_SPEED_FL", "path": "Tires", "fmt": { "len": 16, "bix": 0, "div": 10, "min": 0, "max": 300, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+  ]},
+{ "hdr": "713", "dbg": true, "cmd": {"22": "1801"}, "freq": 10,
+  "signals": [
+    {"id": "IBIZA_WHEEL_SPEED_FR", "path": "Tires", "fmt": { "len": 16, "bix": 0, "div": 10, "min": 0, "max": 300, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+  ]},
+{ "hdr": "713", "dbg": true, "cmd": {"22": "1802"}, "freq": 10,
+  "signals": [
+    {"id": "IBIZA_WHEEL_SPEED_RL", "path": "Tires", "fmt": { "len": 16, "bix": 0, "div": 10, "min": 0, "max": 300, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "713", "dbg": true, "cmd": {"22": "1803"}, "freq": 10,
+  "signals": [
+    {"id": "IBIZA_WHEEL_SPEED_RR", "path": "Tires", "fmt": { "len": 16, "bix": 0, "div": 10, "min": 0, "max": 300, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "14B4"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
     {"id": "IBIZA_FUEL_LEVEL_INPUT", "path": "Fuel", "fmt": { "len": 16, "bix": 0, "div": 100, "min": 0, "max": 45, "unit": "liters" }, "name": "Fuel level input", "suggestedMetric": "fuelTankLevel"}
