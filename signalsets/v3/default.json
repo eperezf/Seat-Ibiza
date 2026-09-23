@@ -35,7 +35,7 @@
   "signals": [
     {"id": "IBIZA_TCM_ECU_TEMP", "path": "ECU", "fmt": { "len": 8, "bix": 0, "min": 0, "max": 100, "unit": "celsius" }, "name": "Temperature"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "3800"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2026 },
+{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "3800"}, "freq": 0.25, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
     {"id": "IBIZA_TCM_BRAKE_SWITCH", "path": "Control", "fmt": { "len": 8, "bix": 0, "min": 0, "max": 1, "unit": "offon" }, "name": "Stop signal switch"}
   ]},
@@ -43,7 +43,7 @@
   "signals": [
     {"id": "IBIZA_TCM_BRAKE_PRESSURE", "path": "Control", "fmt": { "len": 16, "bix": 0, "div": 100, "min": 0, "max": 200, "unit": "psi" }, "name": "Brake pressure"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "3816"}, "freq": 1,
+{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "3816"}, "freq": 0.5,
   "signals": [
     {"id": "IBIZA_CURRENT_GEAR", "path": "Transmission", "fmt": { "len": 8, "bix": 0, "min": 0, "max": 12, "unit": "scalar" }, "name": "Current gear"}
   ]},
