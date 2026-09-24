@@ -13,15 +13,15 @@
   ]},
 { "hdr": "714", "rax": "77E", "cmd": {"22": "2203"}, "freq": 10, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
-    {"id": "IBIZA_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+    {"id": "IBIZA_ODO_DASH", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "714", "rax": "77E", "cmd": {"22": "2206"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
     {"id": "IBIZA_FLI", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "liters" }, "name": "Fuel level", "suggestedMetric": "fuelTankLevel"}
   ]},
-{ "hdr": "714", "rax": "77E", "cmd": {"22": "2294"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2026 },
+{ "hdr": "714", "cmd": {"22": "2294"}, "freq": 30, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
-    {"id": "IBIZA_DTE", "path": "Trips", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "fuelRange"}
+    {"id": "IBIZA_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "fuelRange"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2104"}, "freq": 1,
   "signals": [
@@ -47,33 +47,9 @@
   "signals": [
     {"id": "IBIZA_CURRENT_GEAR", "path": "Transmission", "fmt": { "len": 8, "bix": 0, "min": 0, "max": 12, "unit": "scalar" }, "name": "Current gear"}
   ]},
-  { "hdr": "746", "fcm1": true, "dbg": true, "cmd": {"22": "27C4"}, "freq": 30,
-  "signals": [
-    {"id": "IBIZA_WNDSHLD_TEMP", "path": "Climate", "fmt": { "len": 8, "max": 108.08, "min": -38.8, "mul": 0.576, "add": -38.8, "unit": "celsius" }, "name": "Windshield temperature"}
-  ]},
-{ "hdr": "712", "rax": "77C", "cmd": {"22": "1812"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2026 },
+{ "hdr": "712", "rax": "77C", "cmd": {"22": "1812"}, "freq": 0.25, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
     {"id": "IBIZA_STEERING_ANGLE", "path": "Orientation", "fmt": { "len": 16, "bix": 0, "div": 8, "add": -750, "min": -660, "max": 660, "unit": "degrees" }, "name": "Steering wheel angle"}
-  ]},
-{ "hdr": "713", "dbg": true, "cmd": {"22": "1804"}, "freq": 10,
-  "signals": [
-    {"id": "IBIZA_STEERING_ANGLE_ABS", "path": "Orientation", "fmt": { "len": 16, "bix": 0, "mul": 0.4375, "min": 0, "max": 660, "unit": "degrees" }, "name": "Steering wheel angle absolute"}
-  ]},
-{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "1800"}, "freq": 10,
-  "signals": [
-    {"id": "IBIZA_WHEEL_SPEED_FL", "path": "Tires", "fmt": { "len": 16, "bix": 0, "div": 10, "min": 0, "max": 300, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
-  ]},
-{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "1801"}, "freq": 10,
-  "signals": [
-    {"id": "IBIZA_WHEEL_SPEED_FR", "path": "Tires", "fmt": { "len": 16, "bix": 0, "div": 10, "min": 0, "max": 300, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
-  ]},
-{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "1802"}, "freq": 10,
-  "signals": [
-    {"id": "IBIZA_WHEEL_SPEED_RL", "path": "Tires", "fmt": { "len": 16, "bix": 0, "div": 10, "min": 0, "max": 300, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
-  ]},
-{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "1803"}, "freq": 10,
-  "signals": [
-    {"id": "IBIZA_WHEEL_SPEED_RR", "path": "Tires", "fmt": { "len": 16, "bix": 0, "div": 10, "min": 0, "max": 300, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "14B4"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
@@ -81,7 +57,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1644"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
-    {"id": "IBIZA_LAT_ACCEL", "path": "Movement", "fmt": { "len": 16, "bix": 0, "div": 100, "max": 3, "unit": "gravity" }, "name": "Lateral acceleration"}
+    {"id": "IBIZA_LAT_ACCEL", "path": "Movement", "fmt": { "len": 16, "bix": 0, "div": 100, "max": 100, "unit": "gravity" }, "name": "Lateral acceleration"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "128A"}, "freq": 1,
   "signals": [
@@ -102,6 +78,42 @@
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "105C"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2026 },
   "signals": [
     {"id": "IBIZA_BRAKE_PRESSURE", "path": "Control", "fmt": { "len": 16, "bix": 0, "mul": 10, "min": 0, "max": 100000, "unit": "kilopascal" }, "name": "Brake pressure"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"22": "295A"}, "freq": 30,
+  "signals": [
+    {"id": "IBIZA_ODO_2", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer (alternative)", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "0302"}, "freq": 900,
+  "signals": [
+    {"id": "IBIZA_DRIVE_TIME", "path": "Stats", "fmt": { "len": 16, "max": 16383, "div": 4, "unit": "hours" }, "name": "Total drive time"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "0303"}, "freq": 900,
+  "signals": [
+    {"id": "IBIZA_DRIVE_TIME_ECO", "path": "Stats", "fmt": { "len": 8, "max": 100, "div": 2.5, "unit": "percent" }, "name": "Driving time (eco)", "description": "Value may be wrong, needs more validation. Proportion of time spent driving in eco mode"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "0304"}, "freq": 900,
+  "signals": [
+    {"id": "IBIZA_DRIVE_TIME_SPORT", "path": "Stats", "fmt": { "len": 8, "max": 100, "div": 2.5, "unit": "percent" }, "name": "Driving time (sport)", "description": "Value may be wrong, needs more validation. Proportion of time spent driving in sport mode"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "0305"}, "freq": 900,
+  "signals": [
+    {"id": "IBIZA_DRIVE_TIME_MANUAL", "path": "Stats", "fmt": { "len": 8, "max": 100, "div": 2.5, "unit": "percent" }, "name": "Driving time (manual)", "description": "Value may be wrong, needs more validation. Proportion of time spent driving in manual mode"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "2B1B"}, "freq": 30,
+  "signals": [
+    {"id": "IBIZA_TIRE_FL_SPD", "path": "Movement", "fmt": { "len": 16, "max": 1000, "div": 10, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "2B1C"}, "freq": 30,
+  "signals": [
+    {"id": "IBIZA_TIRE_FR_SPD", "path": "Movement", "fmt": { "len": 16, "max": 1000, "div": 10, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "2B1D"}, "freq": 30,
+  "signals": [
+    {"id": "IBIZA_TIRE_RL_SPD", "path": "Movement", "fmt": { "len": 16, "max": 1000, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "2B1E"}, "freq": 30,
+  "signals": [
+    {"id": "IBIZA_TIRE_RR_SPD", "path": "Movement", "fmt": { "len": 16, "max": 1000, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
   ]}
 ]
 }
